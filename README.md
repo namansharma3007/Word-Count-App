@@ -16,6 +16,8 @@ The following libraries and plugins are used in this application:
 
 * React: A JavaScript library for building user interfaces.
 * axios: A promise-based HTTP client used for making API requests.
+* AppexChart: A component that utilizes the `react-apexcharts` library to display graphs and charts in a React application.
+* react-router-dom: A React library used for implementing routing and navigation functionality in a single-page application.
 
 ## Usage
 To use the application, follow these steps:
