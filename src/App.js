@@ -26,8 +26,7 @@ const App = () => {
           !word.includes("@") &&
           !word.includes("(") &&
           !word.includes(")") &&
-          !word.includes("?") &&
-          word.length >= 2
+          !word.includes("?")
         ) {
           frequency[word] = frequency[word] ? frequency[word] + 1 : 1;
         }
