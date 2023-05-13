@@ -16,7 +16,6 @@ The following libraries and plugins are used in this application:
 
 * React: A JavaScript library for building user interfaces.
 * axios: A promise-based HTTP client used for making API requests.
-* **'App.css'**: A CSS file containing the styling for the application.
 
 ## Usage
 To use the application, follow these steps:
