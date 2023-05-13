@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactApexChart from "react-apexcharts";
+import './AppexCharts.css'
 
 const ApexChart = ({ data }) => {
   const [displayDataSet, setdisplayDataSet] = useState([]);
@@ -76,16 +77,31 @@ const ApexChart = ({ data }) => {
     },
   };
 
+  const exportData = () => {
+    const csvContent =
+      "data:text/csv;charset=utf-8," +
+      displayDataSet.map(([word, count]) => `${word},${count}`).join("\n");
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "word_counts.csv");
+    document.body.appendChild(link);
+    link.click();
+  };
+
   return (
     <div id="chart">
       {displayDataSet.length > 0 ? (
-        <ReactApexChart
-          options={options}
-          series={seriesData}
-          type="bar"
-          height={450}
-          width={1050}
-        />
+        <div className="graph">
+          <ReactApexChart
+            options={options}
+            series={seriesData}
+            type="bar"
+            height={450}
+            width={1050}
+          />
+          <button onClick={exportData} className="export-button">Export Data</button>
+        </div>
       ) : (
         ""
       )}

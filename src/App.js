@@ -61,7 +61,7 @@ const App = () => {
 
         {
           displayData.length === 0 ? 
-          <button onClick={fetchData} className='btn-submit'>Load Data</button>
+          <button onClick={fetchData} className='btn-submit'>Load Graph</button>
           : <span></span>
         }
 
