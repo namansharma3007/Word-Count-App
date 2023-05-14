@@ -46,19 +46,19 @@ const App = () => {
   return (
     <>
       <div class="area" >
-            <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    </div >
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div >
 
 
       <div className='App'>
@@ -66,9 +66,9 @@ const App = () => {
         <h1>Top 20 most Frequent words</h1>
 
         {
-          displayData.length === 0 ? 
-          <button onClick={fetchData} className='btn-submit'>Load Graph</button>
-          : <span></span>
+          displayData.length === 0 ?
+            <button onClick={fetchData} className='btn-submit'>Load Graph</button>
+            : <span></span>
         }
 
         <Routes>
@@ -76,7 +76,7 @@ const App = () => {
             exact
             path="/"
             element={<AppexChart data={displayData} />} />
-      
+
         </Routes>
 
       </div>
