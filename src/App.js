@@ -6,7 +6,7 @@ import './App.css'
 
 const App = () => {
 
-  const [displayData, setdisplayData] = useState([]);
+  const [displayData, setDisplayData] = useState([]);
 
   async function fetchData() {
     try {
@@ -38,7 +38,7 @@ const App = () => {
 
       // Get the top 20 words with highest occurrence
       const topWords = sortedFrequency.slice(0, 20);
-      setdisplayData(topWords)
+      setDisplayData(topWords)
     } catch (err) {
       console.error(err);
     }
@@ -64,7 +64,6 @@ const App = () => {
       <div className='App'>
 
         <h1>Top 20 most Frequent words</h1>
-
         {
           displayData.length === 0 ?
             <button onClick={fetchData} className='btn-submit'>Load Graph</button>
