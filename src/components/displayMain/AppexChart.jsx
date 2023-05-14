@@ -93,6 +93,7 @@ const ApexChart = ({ data }) => {
     <div id="chart">
       {displayDataSet.length > 0 ? (
         <div className="graph">
+          <h1>Top 20 most Frequent words</h1>
           <ReactApexChart
             options={options}
             series={seriesData}

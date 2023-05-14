@@ -63,10 +63,10 @@ const App = () => {
 
       <div className='App'>
 
-        <h1>Top 20 most Frequent words</h1>
+        
         {
           displayData.length === 0 ?
-            <button onClick={fetchData} className='btn-submit'>Load Graph</button>
+            <button onClick={fetchData} className='btn-submit'>Submit</button>
             : <span></span>
         }
 
