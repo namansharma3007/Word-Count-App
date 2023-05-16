@@ -10,14 +10,12 @@ const ApexChart = ({ data }) => {
   }, [data]);
 
   const yAxis = [];
-  for (let i = 0; i < displayDataSet.length; i++) {
-    yAxis.push(displayDataSet[i][1]);
-  }
-
   const xAxis = [];
   for (let i = 0; i < displayDataSet.length; i++) {
+    yAxis.push(displayDataSet[i][1]);
     xAxis.push(displayDataSet[i][0]);
   }
+
   const seriesData = [
     {
       name: "Frequency",
